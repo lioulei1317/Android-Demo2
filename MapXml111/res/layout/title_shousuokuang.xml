@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        android:background="#E0E0E0"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/shouyeImageButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/touxiang001" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <ImageView
+                android:id="@+id/shouye_imageview001"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/shousuokuang" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@id/shouye_imageview001"
+                android:background="@color/bg_White" />
+
+            <Button
+                android:id="@+id/shouye_Buttons"
+                android:layout_width="240dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/zdy_editext"
+                android:hint="搜地点、查公交、找路线"
+                android:singleLine="true"
+               android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:id="@+id/shouye_yuyin"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/shouye_Buttons"
+                android:background="@drawable/shuohua_luying" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

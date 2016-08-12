@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jkxy="http://schemas.android.com/apk/res/com.example.myview"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <com.example.myview.MyRect
+        android:layout_width="100dp"
+        android:layout_height="100dp" 
+        jkxy:rect_color="#ff0000ff"/>
+
+</LinearLayout>

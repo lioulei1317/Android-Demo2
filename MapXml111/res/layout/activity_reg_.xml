@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/log_bg"
+    tools:context=".Reg_Activity" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="204dp"
+        android:background="@drawable/log_line" >
+
+        <ImageView
+            android:id="@+id/image_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/log_user" />
+
+        <EditText
+            android:id="@+id/user_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="12dp"
+            android:background="@null"
+            android:hint="请输入用户名"
+            android:maxLength="10" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="62dp"
+            android:background="@drawable/log_pass" />
+
+        <EditText
+            android:id="@+id/pass_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="62dp"
+            android:background="@null"
+            android:hint="请输入6到18位密码"
+            android:maxLength="18"
+            android:password="true" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="334dp"
+        android:background="@drawable/zhuce" />
+
+</RelativeLayout>

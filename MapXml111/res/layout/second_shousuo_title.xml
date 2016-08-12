@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="#99FFFFFF"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <ImageView
+                android:id="@+id/shuosuo_fanhui"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/log_jiantou" />
+
+            <ImageView
+                android:id="@+id/second_imageview001"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/shousuokuang" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@id/second_imageview001"
+                android:background="@color/bg_White" />
+
+            <EditText
+                android:id="@+id/second_shousuok"
+                android:layout_width="280dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/zdy_editext"
+                android:hint="搜地点、查公交、找路线"
+                android:singleLine="true"
+                android:textCursorDrawable="@null" />
+
+            <Button
+                android:id="@+id/seconds_shousuo"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/second_shousuok"
+                android:background="@drawable/anjian02"
+                android:text="确定"
+                android:textSize="14dp"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/second_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</LinearLayout>

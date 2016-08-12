@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/shouye_bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <include layout="@layout/title_shousuokuang" />
+    </RelativeLayout>
+
+    <include layout="@layout/menu_right_bottom" />
+
+    <ImageButton
+        android:id="@+id/shouye_dingwei"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="120dip"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/anjian01" />
+
+    <ImageView
+        android:id="@+id/shouye_traffice"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/traffice2"
+        android:onClick="setTraffice" />
+
+    <ImageButton
+        android:id="@+id/shouye_tuceng"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/traffice" />
+
+    <LinearLayout
+        android:id="@+id/tuceng_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shouye_tuceng"
+        android:background="#F0F0F0"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/putongditu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traffice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通地图" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/weixingditu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traffice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="卫星地图" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/relitu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traffice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="城市热力图" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_daohang1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#99FFFFFF"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/biaoji_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp" />
+
+            <TextView
+                android:id="@+id/biaoji_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:background="#99FFFFFF"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#99FFFFFF"
+            android:src="@drawable/shuxian" />
+
+        <Button
+            android:id="@+id/daohang_bt1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="2"
+            android:background="#99FFFFFF"
+            android:onClick="searchButtonProcess1"
+            android:text="路线导航"
+            android:textColor="#4876FF"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_daohang2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#99FFFFFF"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/biaoji_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp" />
+
+            <TextView
+                android:id="@+id/biaoji_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:background="#99FFFFFF"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#99FFFFFF"
+            android:src="@drawable/shuxian" />
+
+        <Button
+            android:id="@+id/daohang_bt2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="2"
+            android:background="@drawable/anjian02"
+            android:text="语音导航"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>
